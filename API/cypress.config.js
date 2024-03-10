@@ -8,7 +8,14 @@ module.exports = defineConfig({
     env: {
       "baseUrl" : "https://petstore.swagger.io/v2",
       "username": "Oflores",
-      "updatedUsername": "UPDATED NAME"
+      "updatedUsername": "UPDATED NAME",
+      "userID":401977,
+      "initialEmail":"example@oscar.com",
+      "initialFirstName":"Oscar",
+      "initialLastName":"Flores",
+      "updatedEmail":"juan@perez.com",
+      "updatedFirstName":"Juan",
+      "updatedLastName":"Perez",
     }
   },
 });
