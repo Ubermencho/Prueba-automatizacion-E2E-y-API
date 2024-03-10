@@ -7,11 +7,11 @@ describe("API test flow for the pet store", ()=>{
           method:'POST',
           url:Cypress.env('baseUrl')+'/user/createWithArray',
           body:[{
-            "id": 401977,
+            "id": Cypress.env("userID"),
             "username": Cypress.env("username"),
-            "firstName": "Oscar",
-            "lastName": "Flores",
-            "email": "example@oscar.com",
+            "firstName": Cypress.env("initialFirstName"),
+            "lastName": Cypress.env("initialLastName"),
+            "email": Cypress.env("initialEmail"),
             "password": "P@55w0rd",
             "phone": "94949494",
             "userStatus": 0
@@ -28,8 +28,11 @@ describe("API test flow for the pet store", ()=>{
         url:Cypress.env('baseUrl')+'/user/'+Cypress.env("username"),
     }).then((response)=>{
         expect(response.status).to.eq(200)
-        expect(response.body.id).to.eq(401977)
+        expect(response.body.id).to.eq(Cypress.env("userID"))
         expect(response.body.username).to.eq(Cypress.env("username"))
+        expect(response.body.firstName).to.eq(Cypress.env("initialFirstName"))
+        expect(response.body.lastName).to.eq(Cypress.env("initialLastName"))
+        expect(response.body.email).to.eq(Cypress.env("initialEmail"))
     })
   })
 
@@ -38,17 +41,18 @@ describe("API test flow for the pet store", ()=>{
         method:'PUT',
         url:Cypress.env('baseUrl')+'/user/'+Cypress.env("username"),
         body:{
-          "id": 401977,
+          "id": Cypress.env("userID"),
           "username": Cypress.env("updatedUsername"),
-          "firstName": "Juan",
-          "lastName": "Perez",
-          "email": "Juan@perez.com",
+          "firstName": Cypress.env("updatedFirstName"),
+          "lastName": Cypress.env("updatedLastName"),
+          "email": Cypress.env("updatedEmail"),
           "password": "P@55w0rd",
           "phone": "94949494",
           "userStatus": 0
         },
     }).then((response)=>{
         expect(response.status).to.eq(200)
+        expect(parseInt(response.body.message)).to.eq(Cypress.env("userID"))
     })
   })
 
@@ -58,6 +62,11 @@ describe("API test flow for the pet store", ()=>{
         url:Cypress.env('baseUrl')+'/user/'+Cypress.env("updatedUsername"),
     }).then((response)=>{
         expect(response.status).to.eq(200)
+        expect(response.body.id).to.eq(Cypress.env("userID"))
+        expect(response.body.username).to.eq(Cypress.env("updatedUsername"))
+        expect(response.body.firstName).to.eq(Cypress.env("updatedFirstName"))
+        expect(response.body.lastName).to.eq(Cypress.env("updatedLastName"))
+        expect(response.body.email).to.eq(Cypress.env("updatedEmail"))
     })
   })
 
@@ -67,6 +76,7 @@ describe("API test flow for the pet store", ()=>{
         url:Cypress.env('baseUrl')+'/user/'+Cypress.env("updatedUsername"),
     }).then((response)=>{
         expect(response.status).to.eq(200)
+        expect(response.body.message).to.eq(Cypress.env("updatedUsername"))
     })
   })
 
