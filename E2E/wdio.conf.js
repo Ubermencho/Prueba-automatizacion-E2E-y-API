@@ -57,6 +57,9 @@ exports.config = {
         maxInstances: 5,
         //
         browserName: 'chrome',
+        'goog:chromeOptions': { 
+            args: ["--headless", "user-agent=...","--disable-gpu","--window-size=1440,735"]
+        },
         acceptInsecureCerts: true
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
@@ -70,7 +73,7 @@ exports.config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'info',
+    logLevel: 'error',
     //
     // Set specific log levels per logger
     // loggers:
@@ -217,6 +220,7 @@ exports.config = {
     before: function () {
         browser.url('/')
         require('expect-webdriverio')
+        browser.executeScript('window.localStorage.clear()', []) 
     },
     /**
      * Runs before a WebdriverIO command gets executed.
