@@ -8,10 +8,11 @@ Pre-requisitos:
 Pasos:
 
 1. Desde la CLI, navegar hacia el folder /Test Automation/API
-2. Ejecutar el comando npx cypress open
-3. Desde la GUI de cypress, seleccionar la opcion de E2E
-4. Seleccionar tu navegador de preferencia
-5. Ir a la seccion de Specs 
-6. Seleccionar API.cy.js
+2. Ejecutar el comando npm install
+3.. Ejecutar el comando npx cypress open
+4. Desde la GUI de cypress, seleccionar la opcion de E2E
+5. Seleccionar tu navegador de preferencia
+6. Ir a la seccion de Specs 
+7. Seleccionar API.cy.js
 
 Al seguir estos pasos, podras ejecutar y ver los resultados de las pruebas de API!
