@@ -1,0 +1,10 @@
+Conclusiones:
+
+1. Cypress no es una herramienta que haya utilizado anteriormente para pruebas de API, asi que decidi tomarlo como un reto aprender a usarla para esta pruebas
+
+2. La experiencia que he tenido en el pasado desarrollando pruebas a APIs con otras herramientas demostro ser muy valida y transferible al uso de Cypress.
+
+3. Me gustaria seguir aprendiendo el uso de esta herramienta para sacarle todo el provecho posible
+
+4. El desarrollo de este ejercicio me ayudo a apreciar lo importante que es el conocimiento fundamental de pruebas de API, ya que teniendo ese conocimiento se puede hacer uso de cualquier herramienta
+
