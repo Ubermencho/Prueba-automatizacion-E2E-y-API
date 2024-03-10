@@ -1,0 +1,5 @@
+Conclusiones:
+
+1. Personalmente, WebDriverIO es la herramienta en la que soy mas experto, con casi 4 años de expereincia, me ha resultado una herramienta muy versatil tanto para automatizacion Web y Mobil
+
+2. Basado en mi experiencia usando WebDriverIO, podria pasar a usar cualquier otra herramienta sin ningun problema
