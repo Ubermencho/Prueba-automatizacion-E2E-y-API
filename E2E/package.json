@@ -31,7 +31,6 @@
   "dependencies": {
     "@apollo/client": "^3.3.21",
     "@wdio/codemod": "^0.9.1",
-    "jscodeshift": "^0.13.0",
-    "node-libcurl": "^2.3.3"
+    "jscodeshift": "^0.13.0"
   }
 }
